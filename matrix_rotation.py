@@ -33,7 +33,8 @@ def rotate_grid(grid,rs,re,cs,ce,M,N):
         # Last row
         elif i == re -1:
             #Shift elements right
-            for idx in sorted(range(cs+1,ce),reverse=True):
+            for idx in range(cs+1,ce):
+                idx = ce - idx + cs
                 grid[i][idx] = grid[i][idx-1]
             # input the first element
             grid[i][cs] = saved_first
