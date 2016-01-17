@@ -4,7 +4,7 @@ import java.io.*;
 class Calculator {
     public int power(int n,int p) throws NegativeArgument
     {
-        if(!(n >0 && p > 0))  throw new NegativeArgument();
+        if(!(n >= 0 && p >= 0))  throw new NegativeArgument();
         int ans = 1;
         for(;p > 0;p--){
             ans*=n;
